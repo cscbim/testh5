@@ -115,7 +115,7 @@
         startBtn.addEventListener('click', async () => {
             try {
                 const stream = await navigator.mediaDevices.getUserMedia({
-                    video: { width: 480, height: 360 }
+                    video: { facingMode: "environment", width: 480, height: 360 }
                 });
                 video.srcObject = stream;
                 startBtn.disabled = true;
